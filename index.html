@@ -27,10 +27,27 @@
             margin: 4px 2px; /* Margin */
             cursor: pointer; /* Cursor pointer on hover */
             border-radius: 8px; /* Add some border radius */
+            position: absolute; /* Position the button */
+            top: 10px; /* Adjust top position */
+            right: 10px; /* Adjust right position */
         }
 
         .winningmsg i {
             margin-right: 8px; /* Add some margin to the right of the icon */
+        }
+        canvas {
+            border: solid 10px darkblue;
+            box-shadow: 0px 8px 5px 25px;
+            border-radius: 20px;
+        }
+        #result {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 2em;
+            color: white;
         }
     </style>
 </head>
