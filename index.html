@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ping-Pong</title>
     <style>
         body {
-    background: url('https://img.freepik.com/free-photo/3d-illustration-blue-purple-futuristic-sci-fi-techno-lights-cool-background_181624-57587.jpg?w=1380&t=st=1699653157~exp=1699653757~hmac=cf6ac821aca5cdd4c5096683b9f876a8fa3addcdb16f12d39ef52047638e4aa4') no-repeat center center fixed;
-    background-size: cover;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
+            background: url('https://img.freepik.com/free-photo/3d-illustration-blue-purple-futuristic-sci-fi-techno-lights-cool-background_181624-57587.jpg?w=1380&t=st=1699653157~exp=1699653757~hmac=cf6ac821aca5cdd4c5096683b9f876a8fa3addcdb16f12d39ef52047638e4aa4') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
 
-canvas {
-    border-radius: 20px;
-    border: none; /* Remove the border */
-    box-shadow: none; /* Remove the box shadow */
-}
+        .winningmsg {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
 
-.winningmsg {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
-}
+        canvas {
+            border-radius: 20px;
+            border: none;
+            box-shadow: none;
+        }
 
-#result {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 2em;
-    color: white;
-}
-
+        #result {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 2em;
+            color: white;
+            display: none; /* Initially hide the winning message */
+        }
     </style>
 </head>
+
 <body>
     <canvas id="pong" width="900" height="600"></canvas>
     <button onclick="resetGame()" class="winningmsg">
         <i class="fas fa-redo"></i> Restart Game
     </button>
-    <div id="result" class="winningmsg"></div>
+    <div id="result" class="winningmsg">Winning Message</div>
     <script src="ping-pong.js"></script>
 </body>
+
 </html>
