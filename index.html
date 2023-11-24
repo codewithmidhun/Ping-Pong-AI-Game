@@ -16,30 +16,29 @@
         }
 
         .winningmsg {
-            color: blue;
-            background: white;
-            font-size: 3em;
+            background-color: #4CAF50; /* Green background color */
+            border: none; /* Remove borders */
+            color: white; /* White text color */
+            padding: 15px 32px; /* Padding */
+            text-align: center; /* Center text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Make it an inline block */
+            font-size: 16px; /* Font size */
+            margin: 4px 2px; /* Margin */
+            cursor: pointer; /* Cursor pointer on hover */
+            border-radius: 8px; /* Add some border radius */
         }
 
-        canvas {
-            border: solid 10px darkblue;
-            box-shadow: 0px 8px 5px 25px;
-            border-radius: 20px;
-        }
-        #result {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            font-size: 2em;
-            color: white;
+        .winningmsg i {
+            margin-right: 8px; /* Add some margin to the right of the icon */
         }
     </style>
 </head>
 <body>
     <canvas id="pong" width="900" height="600"></canvas>
-    <button onclick="resetGame()" class="winningmsg">Restart Game</button>
+    <button onclick="resetGame()" class="winningmsg">
+        <i class="fas fa-redo"></i> Restart Game
+    </button>
     <div id="result" class="winningmsg"></div>
     <script src="ping-pong.js"></script>
 </body>
